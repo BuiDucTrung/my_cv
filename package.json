@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -11,11 +13,12 @@
   "dependencies": {
     "dat.gui": "^0.7.9",
     "gsap": "^3.12.2",
-    "parcel": "^2.10.3",
     "three": "^0.158.0",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "parcel": "^2.11.0",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10"
   }
