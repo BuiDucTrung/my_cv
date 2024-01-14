@@ -25,10 +25,10 @@ label {
 }
 .partIntro,
 .partExperience,
-.partSkill {
+.partSkill,
+.partLanguage {
   color: #f9f1f0;
   width: 300px;
-
   background-color: brown;
   opacity: 0;
   border-radius: 10px;
@@ -40,7 +40,8 @@ label {
   align-items: center;
 }
 .partExperience,
-.partSkill {
+.partSkill,
+.partLanguage {
   clip-path: none;
   border-radius: 20px;
 }
@@ -58,21 +59,98 @@ label {
 
 .partIntroMobile,
 .partExperienceMobile,
-.partSkillMobile {
+.partSkillMobile,
+.partLanguageMobile {
   color: #f9f1f0;
   background-color: brown;
   opacity: 0;
-  padding: 5px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: content-box;
+  padding: 20px 30px;
 }
+
+.partIntroMobile p,
+.partExperienceMobile p,
+.partSkillMobile p,
+.partLanguageMobile p {
+  padding: 20px 20px;
+}
+
 .partApreciation {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.partLanguageMobile,
+.partLanguage {
+  flex-direction: column;
+}
+.partLanguageMobile {
+  width: 100vw;
+  height: 100vh;
+}
+
+.optionLng {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.optionLng > div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.optionLng > div label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  font-size: 18px;
+}
+.optionLng > div label::before {
+  position: absolute;
+  width: 30.21px;
+  height: 37.6px;
+  left: -30.21px;
+  top: 0;
+  background-color: transparent;
+  content: "";
+}
+.partLanguage .Typewriter__cursor,
+.partLanguageMobile .Typewriter__cursor {
+  display: none;
+  margin-left: 0px !important;
+}
+.optionLng > div img {
+  width: 30.21px;
+  height: 37.6px;
+}
+
+.optionLng label {
+  font-size: 18px;
+}
+
+.confirmBtn {
+  border: 1px solid #186f65;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s linear;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.confirmBtn:hover {
+  background-color: #186f65;
+}
+
+.notice {
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 20px;
+  line-break: auto;
+  padding: 0 20px;
 }
 
 @keyframes accordion {
