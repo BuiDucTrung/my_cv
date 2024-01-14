@@ -21,7 +21,7 @@ const phoenixBird1 = new URL("../model/phoenix_bird.glb", import.meta.url);
 
 const etrian = new URL("../model/etrian_odyssey_3_monk.glb", import.meta.url);
 const witch = new URL("../model/witchapprentice.glb", import.meta.url);
-const shibahu = new URL("../model/shibahu.glb", import.meta.url);
+// const shibahu = new URL("../model/shibahu.glb", import.meta.url);
 
 i18next.init({
   fallbackLng: "en",
@@ -230,27 +230,6 @@ gltf.load(witch.href, function (gltf) {
   const action = mixerWitch.clipAction(clip);
   scene.add(witchSence);
   action.play();
-});
-
-gltf.load(shibahu.href, function (gltf) {
-  const shibahuSence = gltf.scene;
-  const shibahuAni = gltf.animations;
-  if (isMobile()) {
-    shibahuSence.position.set(6.5, -0.1, 7);
-  } else {
-    shibahuSence.position.set(-13, 5, -13);
-    shibahuSence.scale.set(1.2, 1.2, 1.2);
-  }
-  shibahuSence.traverse(function (node) {
-    if (node.isMesh) {
-      node.castShadow = true;
-    }
-  });
-  const clip = THREE.AnimationClip.findByName(shibahuAni, "Take 001");
-  mixerShibahu = new THREE.AnimationMixer(shibahuSence);
-  const action = mixerShibahu.clipAction(clip);
-  scene.add(shibahuSence);
-  action.play();
   createLabelRenderer();
 
   createNoteLanguage();
@@ -262,6 +241,27 @@ gltf.load(shibahu.href, function (gltf) {
   }
   actionEagle();
 });
+
+// gltf.load(shibahu.href, function (gltf) {
+//   const shibahuSence = gltf.scene;
+//   const shibahuAni = gltf.animations;
+//   if (isMobile()) {
+//     shibahuSence.position.set(6.5, -0.1, 7);
+//   } else {
+//     shibahuSence.position.set(-13, 5, -13);
+//     shibahuSence.scale.set(1.2, 1.2, 1.2);
+//   }
+//   shibahuSence.traverse(function (node) {
+//     if (node.isMesh) {
+//       node.castShadow = true;
+//     }
+//   });
+//   const clip = THREE.AnimationClip.findByName(shibahuAni, "Take 001");
+//   mixerShibahu = new THREE.AnimationMixer(shibahuSence);
+//   const action = mixerShibahu.clipAction(clip);
+//   scene.add(shibahuSence);
+//   action.play();
+// });
 
 //gsap
 const tl = gsap.timeline();
