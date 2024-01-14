@@ -684,9 +684,7 @@ function cameraAnimationPC() {
 function cameraAnimationMobile() {
   if (!animationIsFinished) {
     gsap.to(...animationModel(camera, 5.5, 2, 18));
-
-    const animation = () => {};
-    window.addEventListener("click", function (event) {
+    window.addEventListener("touchstart", function (event) {
       switch (position) {
         case 0:
           position = -1;
