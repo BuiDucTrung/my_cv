@@ -789,29 +789,32 @@ gltf.load(witch.href, function(gltf) {
     const action = mixerWitch.clipAction(clip);
     scene.add(witchSence);
     action.play();
-});
-gltf.load(shibahu.href, function(gltf) {
-    const shibahuSence = gltf.scene;
-    const shibahuAni = gltf.animations;
-    if ((0, _common.isMobile)()) shibahuSence.position.set(6.5, -0.1, 7);
-    else {
-        shibahuSence.position.set(-13, 5, -13);
-        shibahuSence.scale.set(1.2, 1.2, 1.2);
-    }
-    shibahuSence.traverse(function(node) {
-        if (node.isMesh) node.castShadow = true;
-    });
-    const clip = _three.AnimationClip.findByName(shibahuAni, "Take 001");
-    mixerShibahu = new _three.AnimationMixer(shibahuSence);
-    const action = mixerShibahu.clipAction(clip);
-    scene.add(shibahuSence);
-    action.play();
     createLabelRenderer();
     createNoteLanguage();
     if (!(0, _common.isMobile)()) cameraAnimationPC();
     else cameraAnimationMobile();
     actionEagle();
 });
+// gltf.load(shibahu.href, function (gltf) {
+//   const shibahuSence = gltf.scene;
+//   const shibahuAni = gltf.animations;
+//   if (isMobile()) {
+//     shibahuSence.position.set(6.5, -0.1, 7);
+//   } else {
+//     shibahuSence.position.set(-13, 5, -13);
+//     shibahuSence.scale.set(1.2, 1.2, 1.2);
+//   }
+//   shibahuSence.traverse(function (node) {
+//     if (node.isMesh) {
+//       node.castShadow = true;
+//     }
+//   });
+//   const clip = THREE.AnimationClip.findByName(shibahuAni, "Take 001");
+//   mixerShibahu = new THREE.AnimationMixer(shibahuSence);
+//   const action = mixerShibahu.clipAction(clip);
+//   scene.add(shibahuSence);
+//   action.play();
+// });
 //gsap
 const tl = (0, _gsap.gsap).timeline();
 const tl2 = (0, _gsap.gsap).timeline();
