@@ -143,16 +143,16 @@ if (fantasyBookUrl) {
         // "Mill-wind-wheel_Texture-base_0",
         // "Scene_Book-tittle_0",
         // "Scene_Texture-base-gloss-jpg_0",
-        "Scene_Texture-base_0_1",
+        // "Scene_Texture-base_0_1",
         "Scene_Texture-base_0",
       ];
-      // if (nodeNames.includes(node.name) && node.isMesh) {
-      //   node.castShadow = true;
-      //   node.receiveShadow = true;
-      // } else {
-      // }
-      node.castShadow = true;
-      node.receiveShadow = true;
+      if (nodeNames.includes(node.name)) {
+        node.castShadow = false;
+        node.receiveShadow = true;
+      } else {
+        node.castShadow = true;
+        node.receiveShadow = true;
+      }
     });
     const animations = gltf.animations;
 
@@ -512,7 +512,7 @@ function createPartSkill() {
     .pauseFor(timeDelay)
     .typeString(`<span style='font-weight:bold; text-align:center; '>${i18next.t("skill")}</span><br><br>`)
     .typeString(`<span><b>${i18next.t("basicSkill")}:</b> HTML, CSS, Js </span> <br>`)
-    .typeString(`<span><b>${i18next.t("uiLib")}:</b> MUI, Ant, Tailwind </span> <br>`)
+    .typeString(`<span><b>${i18next.t("uiLib")}:</b> MUI, Ant, Tailwind, GSAP </span> <br>`)
     .typeString(`<span><b>${i18next.t("lib")}:</b> ReactJs, ThreeJs</span> <br>`)
     .typeString(`<span><b>${i18next.t("apiLib")}:</b> Tanstack, Axios, Socket, SWR </span> <br>`)
     .typeString(`<span><b>${i18next.t("formLib")}:</b> React hook form, formik </span> <br>`)
