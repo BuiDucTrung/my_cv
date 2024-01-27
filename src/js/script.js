@@ -333,7 +333,12 @@ function createPartIntro() {
     .typeString("<span><b>GPA:</b></span>")
     .deleteChars(4)
     .typeString(`<span><b>${i18next.t("major")}:</b> ${i18next.t("nameMajor")} </span> <br>`)
-    .typeString("<span><b>GPA:</b> 2.72</span>")
+    .typeString(`<span><b>${i18next.t("email")}:</b> ${i18next.t("nameMajor")} </span> <br>`)
+    .typeString(
+      `<span><b>Github: </b> <a id="linkCv"
+      href="https://github.com/BuiDucTrung" target="_blank">Github</a> </span> <br>`
+    )
+    .typeString(`<span><b>${i18next.t("labelPosAppliedFor")}:</b> ${i18next.t("posAppliedFor")} </span> <br>`)
     .start();
 }
 

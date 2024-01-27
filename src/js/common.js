@@ -36,6 +36,8 @@ export const dataEng = {
     projectName: "Project",
     notice: "After confirm what language you want, press space bar on keyboard to continue please!!!",
     noticeMobile: "After confirm what language you want, left-click to continue please!!!",
+    labelPosAppliedFor: "Position Applied for",
+    posAppliedFor: "NextJs + ReactJs + ThreeJs developer",
   },
 };
 
@@ -70,6 +72,8 @@ export const dataVi = {
     projectName: "Dự án",
     notice: "Sau khi chọn ngôn ngữ, làm ơn ấn nút cách trên bàn phím để tiếp tục!!!",
     noticeMobile: "Sau khi chọn ngôn ngữ, làm ơn click chuột trái để tiếp tục!!!",
+    labelPosAppliedFor: "Vị trí ứng tuyển",
+    posAppliedFor: "Lập trình viên NextJs + ReactJs + ThreeJs",
   },
 };
 
