@@ -34,7 +34,6 @@ label {
   border-radius: 10px;
   padding: 5px 20px;
   animation: accordion 2.5s forwards;
-  clip-path: polygon(0 43%, 2% 18%, 18% 0, 50% 9%, 82% 0, 98% 18%, 100% 41%, 93% 66%, 78% 84%, 50% 100%, 22% 84%, 7% 66%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,6 +150,11 @@ label {
   margin-top: 20px;
   line-break: auto;
   padding: 0 20px;
+}
+
+a {
+  font-style: italic;
+  color: inherit;
 }
 
 @keyframes accordion {

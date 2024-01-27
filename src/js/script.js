@@ -333,9 +333,9 @@ function createPartIntro() {
     .typeString("<span><b>GPA:</b></span>")
     .deleteChars(4)
     .typeString(`<span><b>${i18next.t("major")}:</b> ${i18next.t("nameMajor")} </span> <br>`)
-    .typeString(`<span><b>${i18next.t("email")}:</b> ${i18next.t("nameMajor")} </span> <br>`)
+    .typeString(`<span><b>Email:</b> <a href="mailto:trung.bui36898@gmail.com">Trung Bui</a> </span> <br>`)
     .typeString(
-      `<span><b>Github: </b> <a id="linkCv"
+      `<span><b>Github: </b> <a
       href="https://github.com/BuiDucTrung" target="_blank">Github</a> </span> <br>`
     )
     .typeString(`<span><b>${i18next.t("labelPosAppliedFor")}:</b> ${i18next.t("posAppliedFor")} </span> <br>`)
@@ -594,6 +594,8 @@ function cameraAnimationPC() {
     gsap.from(...animationModel(camera, -15, 10, 0));
 
     window.addEventListener("keydown", function (event) {
+      // console.log("event", event);
+
       if (event.code === "Space") {
         switch (position) {
           case 0:
