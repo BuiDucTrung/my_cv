@@ -369,7 +369,7 @@ function createPartExperience() {
     .typeString(`<span><b>04/2021 - 04/2022</b>: ${i18next.t("amela")} </span> <br>`)
     .typeString(`<span><b> &ensp; ${i18next.t("role")}</b>: ReactJs + NextJs developer </span> <br><br>`)
     .pauseFor(1000)
-    .typeString(`<span><b>5/2022 - 7/2023</b>: ${i18next.t("sotatek")}</span><br> `)
+    .typeString(`<span><b>05/2022 - 01/2024</b>: ${i18next.t("sotatek")}</span><br> `)
     .typeString(`<span><b>&ensp; ${i18next.t("role")}</b>: ReactJs + NextJs + ThreeJs <br> &ensp; &ensp; developer</span>`)
     .start();
 }
@@ -444,11 +444,13 @@ function createNoteLanguage() {
   const div = document.createElement("div");
   const notice = document.createElement("span");
   notice.className = "notice";
+  notice.style.color = "#FF9843";
+  notice.style.fontWeight = "600";
   notice.innerText = isMobile() ? `${i18next.t("noticeMobile")}` : `${i18next.t("notice")}`;
   div.appendChild(content);
   div.appendChild(optionsDiv);
-  div.appendChild(btn);
   div.appendChild(notice);
+  div.appendChild(btn);
   divContainer = new CSS2DObject(div);
   scene.add(divContainer);
   if (isMobile()) {
